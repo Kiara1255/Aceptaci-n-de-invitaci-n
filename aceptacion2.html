@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snoopy - San Valentín</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #ffcccb, #ff6699, #ff99cc, #ff4d4d);
+            background-size: 400% 400%;
+            animation: fondoAnimado 10s infinite linear;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        @keyframes fondoAnimado {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            background: linear-gradient(90deg, #ff4d4d, #ffcc00, #33cc33, #3399ff, #9933ff);
+            background-size: 300% 300%;
+            animation: botonAnimado 3s infinite alternate;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        @keyframes botonAnimado {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        img {
+            display: none;
+            max-width: 80%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="mostrarImagen()">Presiona aquí</button>
+    <img id="snoopyImg" src="NuevaImagen.png" alt="Sabía que era un sí, te amo">
+    
+    <script>
+        function mostrarImagen() {
+            document.getElementById('snoopyImg').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
