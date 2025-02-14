@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snoopy - San Valentín</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffcccb;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            background-color: #ff4d4d;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        img {
+            display: none;
+            max-width: 80%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="mostrarImagen()">Presiona aquí</button>
+    <img id="snoopyImg" src="NuevaImagen.png" alt="Sabía que era un sí, te amo">
+    
+    <script>
+        function mostrarImagen() {
+            document.getElementById('snoopyImg').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
